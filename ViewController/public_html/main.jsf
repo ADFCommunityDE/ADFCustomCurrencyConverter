@@ -69,7 +69,8 @@
                                       columns="#{bindings.Salary.hints.displayWidth}"
                                       shortDesc="#{bindings.Salary.hints.tooltip}" id="it7" autoSubmit="true">
                             <f:validator binding="#{bindings.Salary.validator}"/>
-                            <f:converter converterId="de.teampb.conv.CurrencyConverter"/>
+                            <!--f:converter converterId="de.teampb.conv.CurrencyConverter"/-->
+                            <af:convertNumber type="currency" minFractionDigits="2" maxFractionDigits="2"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.CommissionPct.inputValue}"
                                       label="#{bindings.CommissionPct.hints.label}"
